@@ -95,12 +95,12 @@
 $classVarBasic = [MyDateII]::new() | Get-Member
 $classVarBasic.Count
 
-#To get the hidden property use -Force
+#To get the hidden property use -Force with a count
 $classVarHidden = [MyDateII]::new() | Get-Member -Force
 $classVarHidden.Count
 
 
-#To get the Static methods
+#To get the Static methods with a count
 $classVarStatic = [MyDateII]::new() | Get-Member -Static
 $classVarStatic.Count
 #endregion
