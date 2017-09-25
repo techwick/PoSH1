@@ -91,13 +91,18 @@
 [MyDateII]::new
 
 #Get the basic information from the Class
-[MyDateII]::new() | Get-Member
+[MyDateII]::new() #| Get-Member
+$classVarBasic = [MyDateII]::new() | Get-Member
+$classVarBasic.Count
 
 #To get the hidden property use -Force
-[MyDateII]::new() | Get-Member -Force
+$classVarHidden = [MyDateII]::new() | Get-Member -Force
+$classVarHidden.Count
+
 
 #To get the Static methods
-[MyDateII]::new() | Get-Member -Static
+$classVarStatic = [MyDateII]::new() | Get-Member -Static
+$classVarStatic.Count
 #endregion
 
 #region Example 1
